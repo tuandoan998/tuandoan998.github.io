@@ -9,8 +9,8 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Tuan Doan / Site Title"
-title_separator          : "-"
+title                    : "Tuan Doan"
+title_separator          : ""
 name                     : &name "Tuan Doan"
 description              : &description "Tuan Doan's portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://tuandoan998.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
@@ -24,13 +24,13 @@ repository               : "tuandoan998/tuandoan998.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
-  pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
-  uri              : # URL
-  email            : "none@example.org" 
+  name             : "Tuan Doan"
+  pronouns         : # example: "he/him"  
+  bio              : "Machine Learning Engineer with 5+ years of experience building and deploying computer vision and LLM-powered systems. Specialized in RAG pipelines, document intelligence, and OCR."
+  location         : "Quang Tri, Vietnam"
+  employer         : "CyberLogitec"
+  uri              : https://tuandoan998.github.io
+  email            : "doantuan998@gmail.com" 
 
   # Academic websites
   academia         : # URL
@@ -221,16 +221,7 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
   portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
     output: true
     permalink: /:collection/:path/
 
@@ -243,10 +234,10 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: true
-      comments: true
-      share: true
+      comments: false
+      share: false
       related: true
   # _pages
   - scope:
@@ -254,42 +245,16 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _publications
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
+      author_profile: false
   # _portfolio
   - scope:
       path: ""
       type: portfolio
     values:
       layout: single
-      author_profile: true
-      share: true
-      comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
+      author_profile: false
+      share: false
+      comment: false
 
 
 # Sass/SCSS

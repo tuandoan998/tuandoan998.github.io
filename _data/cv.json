@@ -1,152 +1,126 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
-    "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "name": "Tuan Doan",
+    "email": "doantuan998@gmail.com",
+    "phone": "(+84)3 8706 6190",
+    "website": "https://tuandoan998.github.io",
+    "summary": "Machine Learning Engineer with 5+ years of experience building and deploying computer vision and LLM-powered systems. Specialized in RAG pipelines, document intelligence, and OCR.",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Earth",
-      "countryCode": "US",
-      "region": ""
+      "city": "Quang Tri",
+      "countryCode": "VN",
+      "region": "Vietnam"
     },
     "profiles": [
       {
-        "network": "Google Scholar",
-        "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-      },
-      {
-        "network": "ORCID",
-        "username": "",
-        "url": "https://orcid.org/yourorcidurl"
+        "network": "LinkedIn",
+        "username": "tuan-doan-cv",
+        "url": "https://linkedin.com/in/tuan-doan-cv/"
       },
       {
         "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "username": "tuandoan998",
+        "url": "https://github.com/tuandoan998"
       }
     ]
   },
-  "work": [],
+  "work": [
+    {
+      "company": "CyberLogitec",
+      "position": "Machine Learning Engineer",
+      "website": "",
+      "startDate": "2021-09-01",
+      "endDate": "2026-02-28",
+      "summary": "HCMC, Vietnam",
+      "highlights": [
+        "LLM & RAG Systems: Projects include HR-Chatbot, Codebase-Chatbot, Terminal-Chatbot, and Document Q&A systems. Focus on Retrieval part in RAG technique: parsing, chunking, indexing, retrieval. Design and implement Document ingestion pipeline supporting PDF, DOCX, XLSX, PPTX, enabling enterprise RAG systems. Build multi-tenant indexing and retrieval system with duplicate prevention, custom chunking, and hybrid retrieval + reranking.",
+        "Document Intelligence: Built pipelines to classify shipping documents and extract key-value pairs and bounding boxes, supporting downstream automation workflows.",
+        "Container Number Recognition: Improved system accuracy from 91% to 98.1% through data augmentation, model retraining, and post-processing optimization. Retrained text detection model using PaddleOCR (v4) and MMOCR (DB++). Generated synthetic OCR training data for robustness under low-quality conditions.",
+        "Robotics: Integrated Speech-to-text, Text-to-speech services, and OCR into Robotic system. Retrained object detection models using YOLOv8 for real-time perception tasks.",
+        "MLOps: Implemented Azure-based ML workflows covering experiment tracking, model versioning, and deployment pipelines."
+      ]
+    },
+    {
+      "company": "VCCorp",
+      "position": "Computer Vision Engineer",
+      "website": "",
+      "startDate": "2020-11-01",
+      "endDate": "2021-09-30",
+      "summary": "HCMC, Vietnam",
+      "highlights": [
+        "Adult Content Detection in Videos: Trained adult content detection model for large-scale video moderation, outperforming legacy model in precision and recall for production censorship systems."
+      ]
+    }
+  ],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
-      "gpa": null,
-      "courses": []
-    },
-    {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
-      "gpa": null,
-      "courses": []
-    },
-    {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
-      "gpa": null,
+      "institution": "University of Science – VNU-HCMC",
+      "area": "Bachelor of Computer Science",
+      "studyType": "Honors Program",
+      "startDate": "2016-08-01",
+      "endDate": "2020-10-31",
+      "gpa": "8.19/10",
       "courses": []
     }
   ],
-  "skills": [],
-  "languages": [],
+  "skills": [
+    {
+      "name": "Core Technologies",
+      "keywords": [
+        "Python",
+        "PyTorch",
+        "TensorFlow",
+        "TensorFlow Lite",
+        "Computer Vision",
+        "OCR",
+        "Detection",
+        "Segmentation",
+        "Retrieval",
+        "Numpy",
+        "Pandas",
+        "Scikit-learn",
+        "CI/CD-oriented ML pipelines"
+      ]
+    },
+    {
+      "name": "LLM & AI Systems",
+      "keywords": [
+        "LLM-based systems",
+        "RAG pipelines",
+        "Embeddings",
+        "Prompt engineering",
+        "Semantic search architectures",
+        "LangChain",
+        "LlamaIndex",
+        "HuggingFace",
+        "Docling",
+        "Unstructured"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Vietnamese",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "Intermediate (B1-B2)"
+    }
+  ],
   "interests": [],
   "references": [],
   "publications": [
     {
-      "name": "Paper Title Number 1",
-      "publisher": "Journal 1",
-      "releaseDate": "2009-10-01",
-      "website": "https://academicpages.github.io/files/paper1.pdf",
-      "summary": "This paper is about the number 1. The number 2 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 2",
-      "publisher": "Journal 1",
-      "releaseDate": "2010-10-01",
-      "website": "https://academicpages.github.io/files/paper2.pdf",
-      "summary": "This paper is about the number 2. The number 3 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 3",
-      "publisher": "Journal 1",
-      "releaseDate": "2015-10-01",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about the number 3. The number 4 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 4",
-      "publisher": "GitHub Journal of Bugs",
-      "releaseDate": "2024-02-17",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about fixing template issue #693."
+      "name": "Transformer-Based Model for Vietnamese Handwritten Word Image Recognition",
+      "publisher": "2020 7th NAFOSTED Conference on Information and Computer Science (NICS)",
+      "releaseDate": "2020-01-01",
+      "website": "",
+      "summary": "Best paper award, 2nd-author. Research on Vietnamese handwritten text recognition using transformer models."
     }
   ],
-  "presentations": [
-    {
-      "name": "Talk 1 on Relevant Topic in Your Field",
-      "event": "UC San Francisco, Department of Testing",
-      "date": "2012-03-01",
-      "location": "San Francisco, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Tutorial 1 on Relevant Topic in Your Field",
-      "event": "UC-Berkeley Institute for Testing Science",
-      "date": "2013-03-01",
-      "location": "Berkeley, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Talk 2 on Relevant Topic in Your Field",
-      "event": "London School of Testing",
-      "date": "2014-02-01",
-      "location": "London, UK",
-      "description": ""
-    },
-    {
-      "name": "Conference Proceeding talk 3 on Relevant Topic in Your Field",
-      "event": "Testing Institute of America 2014 Annual Conference",
-      "date": "2014-03-01",
-      "location": "Los Angeles, CA, USA",
-      "description": ""
-    }
-  ],
-  "teaching": [
-    {
-      "course": "Teaching experience 1",
-      "institution": "University 1, Department",
-      "date": "2014-01-01",
-      "role": "Undergraduate course",
-      "description": ""
-    },
-    {
-      "course": "Teaching experience 2",
-      "institution": "University 1, Department",
-      "date": "2015-01-01",
-      "role": "Workshop",
-      "description": ""
-    }
-  ],
-  "portfolio": [
-    {
-      "name": "Portfolio item number 1",
-      "category": "portfolio",
-      "date": "",
-      "url": "",
-      "description": "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
-    }
-  ]
+  "presentations": [],
+  "teaching": [],
+  "portfolio": []
 }

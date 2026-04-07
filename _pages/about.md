@@ -1,56 +1,71 @@
 ---
-permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
-author_profile: true
-redirect_from: 
-  - /about/
+permalink: /about/
+title: "About me"
+author_profile: false
+redirect_from:
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
+## Senior AI Engineer & Machine Learning Specialist
 
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+I am a Senior AI Engineer with 5+ years of experience building production-grade computer vision and LLM-powered systems for logistics and media companies. I specialize in solving complex document processing challenges and building intelligent systems that work reliably in production environments.
 
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured Markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various Markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+## Expertise Areas
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your Markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the Markdown files! You can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+### 🤖 Computer Vision & OCR Systems
+I build high-precision OCR and computer vision pipelines that go beyond generic solutions. At CyberLogitec, I improved container number recognition accuracy from 91% to 98.1% through custom post-processing and model optimization.
 
-For those users that need more advanced functionality, the template also supports the following popular tools:
-- [MathJax](https://www.mathjax.org/) for mathematical equations
-- [Mermaid](https://mermaid.js.org/) for diagraming
-- [Plotly](https://plotly.com/javascript/) for plotting
+**What I solve:**
+- Document digitization and key-value extraction from PDFs, shipping documents, and invoices
+- Object detection and segmentation with automated dataset optimization
+- Image retrieval systems for enterprise applications
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](https://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+**Tech Stack:** PaddleOCR, MMOCR, EasyOCR, YOLO (v5-v11), OpenCV, Docker, Flask/FastAPI, Azure MLOps
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+### 🧠 LLM & RAG Development
+I specialize in building RAG (Retrieval-Augmented Generation) systems that actually work in production. While many developers can connect APIs, I focus on the "hard parts": parsing complex documents, preventing hallucinations, and optimizing retrieval accuracy.
 
-Create content & metadata
-------
-For site content, there is one Markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a Markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each Markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+**What I solve:**
+- Advanced RAG pipelines with hybrid retrieval (keyword + semantic search) and re-ranking
+- Robust document ingestion pipelines for PDF, DOCX, XLSX, and PPTX files
+- Quantitative evaluation and optimization using RAGAs and DeepEval frameworks
 
-**Markdown generator**
+**Tech Stack:** LangChain, LlamaIndex, GPT-4, Gemini (Vertex AI), Llama 3, Mistral, Chroma, FAISS, Pinecone
 
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual Markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the Markdown files, then commit and push them to the GitHub repository.
+### 📄 Intelligent Document Processing
+I transform messy, scanned, and rotated PDFs into clean, validated structured data. Whether you have thousands of invoices, bank statements, or shipping manifests, I build automated pipelines that handle the edge cases that break generic OCR tools.
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and Markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+**What I solve:**
+- Scanned and rotated PDF processing with deskewing and denoising
+- Multi-page table extraction and merging
+- LLM-powered text repair and context inference
+- 100% data validation with Pydantic schemas
 
-Example: editing a Markdown file for a talk
-![Editing a Markdown file for a talk](/images/editing-talk.png)
+**Tech Stack:** PaddleOCR, Tesseract, DocTR, PyMuPDF, pdfplumber, Google Document AI, Pydantic, Pandas, Regular Expressions
 
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+## Professional Experience
+
+**Machine Learning Engineer** | CyberLogitec (2021-Present)
+- Built LLM & RAG systems including HR-Chatbot, Codebase-Chatbot, and Document Q&A systems
+- Developed document ingestion pipelines supporting enterprise RAG systems
+- Achieved 98.1% accuracy in container number OCR through model optimization
+- Integrated robotics systems with speech-to-text, text-to-speech, and OCR capabilities
+
+**Computer Vision Engineer** | VCCorp (2020-2021)
+- Trained adult content detection models for video moderation systems
+- Improved model performance for production censorship workflows
+
+**Education**
+- Bachelor of Computer Science, University of Science – VNU-HCMC (2016-2020)
+- GPA: 8.19/10, Honors Program
+- Thesis: Vietnamese Handwritten Text Recognition using Transformer models
+
+## Publications
+"Transformer-Based Model for Vietnamese Handwritten Word Image Recognition" - 2020 7th NAFOSTED Conference on Information and Computer Science (Best paper award, 2nd-author)
+
+## Let's Work Together
+
+I'm passionate about solving complex AI challenges and building systems that deliver real business value. Whether you need to automate document processing, build intelligent chatbots, or optimize computer vision pipelines, I can help turn your vision into production-ready solutions.
+
+[📧 Contact Me](mailto:doantuan998@gmail.com) | [💼 LinkedIn](https://linkedin.com/in/tuan-doan-cv/) | [💻 GitHub](https://github.com/tuandoan998) 
+
