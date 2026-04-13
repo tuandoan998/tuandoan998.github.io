@@ -103,5 +103,3 @@ For even higher production throughput, the models can be exported to TensorRT (f
 Building a robust Container Number Recognition system requires more than just deep learning models; it heavily relies on understanding the domain data. By separating text regions smartly during data labeling, leveraging DBNet for robust polygon detection, fusing multiple recognizers, and enforcing ISO check-digit validation in post-processing, the resulting system achieves high accuracy even on rugged, real-world container images.
 
 The PaddleOCR framework provides an excellent foundation, allowing us to focus on the business logic and deployment architecture.
-
-*Have you worked on OCR pipelines for complex environments? Let me know your thoughts or questions in the comments below!*

@@ -37,6 +37,7 @@ After the `---`, you can write your blog post using standard Markdown!
 
 ## Running Locally
 
+### Ruby and Jekyll
 1. Install Ruby and Jekyll dependencies:
    ```bash
    bundle install
@@ -47,3 +48,15 @@ After the `---`, you can write your blog post using standard Markdown!
    ```
 
 For advanced instructions or framework modifications, consult the original template docs at [academicpages.github.io](https://academicpages.github.io/).
+
+### Using Docker
+Working from a different OS, or just want to avoid installing dependencies? You can use the provided Dockerfile to build a container that will run the site for you if you have Docker installed.
+
+You can build and execute the container by running the following command in the repository:
+
+```bash
+chmod -R 777 .
+docker compose up
+```
+
+You should now be able to access the website from localhost:4000.

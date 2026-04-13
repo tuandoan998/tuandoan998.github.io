@@ -1,0 +1,566 @@
+/* ==========================================================================
+   PROFESSIONAL OVERRIDES
+   Modern design layer on top of the Air theme.
+   - Inter + JetBrains Mono typography
+   - Smooth micro-animations
+   - Polished masthead, post cards, code blocks, tags, footer
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. TYPOGRAPHY — Inter everywhere
+   -------------------------------------------------------------------------- */
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace;
+
+  /* Refined air-theme palette overrides */
+  --pro-accent:         #0077cc;
+  --pro-accent-hover:   #005fa3;
+  --pro-accent-subtle:  rgba(0, 119, 204, 0.08);
+  --pro-text:           #1a1f2e;
+  --pro-text-muted:     #6b7280;
+  --pro-border:         #e5e7eb;
+  --pro-bg:             #ffffff;
+  --pro-bg-muted:       #f9fafb;
+  --pro-tag-bg:         #eef2ff;
+  --pro-tag-text:       #3b4fcf;
+  --pro-shadow-sm:      0 1px 3px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.04);
+  --pro-shadow-md:      0 4px 12px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.05);
+  --pro-shadow-lg:      0 10px 28px rgba(0,0,0,0.10), 0 4px 12px rgba(0,0,0,0.06);
+  --pro-radius:         8px;
+  --pro-radius-lg:      14px;
+  --pro-transition:     all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html, body {
+  font-family: var(--font-sans) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans) !important;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+}
+
+p, li, dd, dt, blockquote {
+  font-family: var(--font-sans) !important;
+  line-height: 1.75;
+}
+
+/* Monospace: code & pre */
+code, pre, kbd, samp, tt {
+  font-family: var(--font-mono) !important;
+  font-size: 0.875em;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. MASTHEAD — Glass bar with accent underline
+   -------------------------------------------------------------------------- */
+
+.masthead {
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid var(--pro-border) !important;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04), var(--pro-shadow-sm);
+
+  &::after {
+    display: none; /* replaced by box-shadow */
+  }
+
+  &__inner-wrap {
+    padding: 0.55em 1.5em !important;
+    font-family: var(--font-sans) !important;
+  }
+}
+
+/* Site title / logo link */
+.masthead__menu-item--lg a,
+.site-title,
+.masthead__menu-item--lg {
+  font-weight: 700 !important;
+  font-size: 1.05rem !important;
+  letter-spacing: -0.03em;
+  color: var(--pro-text) !important;
+}
+
+/* Nav links */
+.greedy-nav a,
+.greedy-nav .nav-link {
+  font-family: var(--font-sans) !important;
+  font-size: 0.88rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.01em;
+  color: var(--pro-text-muted) !important;
+  text-decoration: none !important;
+  position: relative;
+  padding-bottom: 2px;
+  transition: var(--pro-transition);
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--pro-accent);
+    border-radius: 1px;
+    transition: width 0.22s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  &:hover {
+    color: var(--pro-accent) !important;
+    &::after { width: 100%; }
+  }
+}
+
+.masthead__menu-item.selected a {
+  color: var(--pro-accent) !important;
+  font-weight: 600 !important;
+  border-bottom: none !important;
+  &::after {
+    width: 100%;
+    background: var(--pro-accent);
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   3. PAGE LAYOUT — breathing room
+   -------------------------------------------------------------------------- */
+
+#main {
+  margin-top: 3em !important;
+  padding-left: 1.5em !important;
+  padding-right: 1.5em !important;
+}
+
+.page__title {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+  line-height: 1.2 !important;
+  color: var(--pro-text) !important;
+  margin-bottom: 0.4em !important;
+}
+
+.page__content {
+  h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-top: 2.2em;
+    padding-bottom: 0.4em;
+    border-bottom: 1px solid var(--pro-border);
+    color: var(--pro-text);
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-top: 1.6em;
+    color: var(--pro-text);
+  }
+
+  /* Smooth link underlines */
+  a {
+    color: var(--pro-accent) !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(0,119,204,0.3);
+    transition: var(--pro-transition);
+
+    &:hover {
+      color: var(--pro-accent-hover) !important;
+      border-bottom-color: var(--pro-accent);
+      background: var(--pro-accent-subtle);
+      border-radius: 2px;
+      padding: 0 1px;
+    }
+  }
+
+  /* blockquote — accent bar */
+  blockquote {
+    border-left: 3px solid var(--pro-accent);
+    background: var(--pro-accent-subtle);
+    padding: 0.8em 1.2em;
+    border-radius: 0 var(--pro-radius) var(--pro-radius) 0;
+    margin: 1.5em 0;
+    font-style: normal;
+    color: var(--pro-text);
+
+    p { margin: 0; line-height: 1.65; }
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   4. BLOG ARCHIVE — card-style list items with hover lift
+   -------------------------------------------------------------------------- */
+
+.archive__subtitle {
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: var(--pro-text-muted) !important;
+  border-bottom: 1px solid var(--pro-border) !important;
+  padding-bottom: 0.5em !important;
+  margin-top: 2.5em !important;
+}
+
+.list__item {
+  position: relative;
+  padding: 1.1em 1.25em !important;
+  margin-bottom: 0.6em !important;
+  border: 1px solid var(--pro-border);
+  border-radius: var(--pro-radius-lg) !important;
+  background: var(--pro-bg) !important;
+  box-shadow: var(--pro-shadow-sm);
+  transition: var(--pro-transition);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--pro-shadow-md);
+    border-color: rgba(0,119,204,0.25);
+  }
+}
+
+.archive__item-title {
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.35 !important;
+  margin-bottom: 0.3em !important;
+
+  a {
+    color: var(--pro-text) !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    transition: var(--pro-transition);
+
+    &:hover {
+      color: var(--pro-accent) !important;
+      background: none !important;
+      padding: 0 !important;
+    }
+  }
+}
+
+.archive__item-excerpt {
+  font-size: 0.875rem !important;
+  color: var(--pro-text-muted) !important;
+  line-height: 1.6 !important;
+  margin-top: 0.2em !important;
+}
+
+/* Read time & date meta */
+.page__meta {
+  font-family: var(--font-sans) !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  color: var(--pro-text-muted) !important;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  margin-bottom: 0.4em !important;
+
+  i { font-size: 0.85em; }
+}
+
+
+/* --------------------------------------------------------------------------
+   5. CODE BLOCKS — dark theme with language label
+   -------------------------------------------------------------------------- */
+
+.highlight,
+div.highlight,
+figure.highlight {
+  border-radius: var(--pro-radius) !important;
+  overflow: hidden;
+  margin: 1.4em 0 !important;
+  box-shadow: var(--pro-shadow-sm);
+
+  pre {
+    margin: 0 !important;
+    padding: 1.1em 1.25em !important;
+    font-size: 0.82rem !important;
+    line-height: 1.6 !important;
+  }
+}
+
+/* Inline code */
+code.highlighter-rouge,
+p code, li code, td code {
+  background: var(--pro-bg-muted) !important;
+  border: 1px solid var(--pro-border) !important;
+  border-radius: 4px !important;
+  padding: 0.1em 0.4em !important;
+  font-size: 0.83em !important;
+  color: #c7254e !important;
+  word-break: break-word;
+}
+
+
+/* --------------------------------------------------------------------------
+   6. TAGS & TAXONOMY CHIPS
+   -------------------------------------------------------------------------- */
+
+.page__taxonomy-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 3px 10px !important;
+  margin: 3px 4px 3px 0 !important;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  background: var(--pro-tag-bg) !important;
+  color: var(--pro-tag-text) !important;
+  border: 1px solid rgba(59,79,207,0.2) !important;
+  border-radius: 999px !important;
+  text-decoration: none !important;
+  transition: var(--pro-transition);
+
+  &:hover {
+    background: var(--pro-accent) !important;
+    color: #fff !important;
+    border-color: var(--pro-accent) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0,119,204,0.25);
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   7. SOCIAL & AUTHOR LINKS — icon hover pop
+   -------------------------------------------------------------------------- */
+
+.author__urls a,
+.social-icons a {
+  transition: var(--pro-transition) !important;
+  border-bottom: none !important;
+
+  &:hover {
+    color: var(--pro-accent) !important;
+    transform: translateX(3px);
+    background: none !important;
+  }
+}
+
+.author__avatar img {
+  border-radius: 50% !important;
+  box-shadow: 0 0 0 3px var(--pro-border), var(--pro-shadow-md) !important;
+  transition: var(--pro-transition);
+
+  &:hover {
+    box-shadow: 0 0 0 3px var(--pro-accent), var(--pro-shadow-md) !important;
+  }
+}
+
+.author__name {
+  font-family: var(--font-sans) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.author__bio {
+  font-family: var(--font-sans) !important;
+  font-size: 0.82rem !important;
+  line-height: 1.6 !important;
+  color: var(--pro-text-muted) !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   8. BUTTONS
+   -------------------------------------------------------------------------- */
+
+.btn,
+.btn--inverse {
+  font-family: var(--font-sans) !important;
+  font-weight: 600 !important;
+  font-size: 0.82rem !important;
+  letter-spacing: 0.02em !important;
+  border-radius: var(--pro-radius) !important;
+  transition: var(--pro-transition) !important;
+}
+
+.btn--inverse {
+  background: var(--pro-bg) !important;
+  color: var(--pro-text) !important;
+  border: 1px solid var(--pro-border) !important;
+
+  &:hover {
+    border-color: var(--pro-accent) !important;
+    color: var(--pro-accent) !important;
+    box-shadow: 0 2px 8px rgba(0,119,204,0.15) !important;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   9. FOOTER — subtle, clean
+   -------------------------------------------------------------------------- */
+
+.page__footer {
+  background: var(--pro-bg-muted) !important;
+  border-top: 1px solid var(--pro-border) !important;
+  margin-top: 4em;
+
+  footer {
+    font-family: var(--font-sans) !important;
+    font-size: 0.78rem !important;
+    color: var(--pro-text-muted) !important;
+    padding: 1.8em 1.5em !important;
+  }
+
+  a {
+    color: var(--pro-accent) !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    transition: var(--pro-transition);
+    &:hover { color: var(--pro-accent-hover) !important; }
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   10. TABLES — clean striped
+   -------------------------------------------------------------------------- */
+
+table {
+  border-radius: var(--pro-radius) !important;
+  overflow: hidden;
+  border: 1px solid var(--pro-border) !important;
+  box-shadow: var(--pro-shadow-sm);
+  font-size: 0.875rem !important;
+  margin: 1.5em 0;
+  width: 100%;
+
+  th {
+    background: var(--pro-bg-muted) !important;
+    font-weight: 600 !important;
+    font-size: 0.78rem !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase;
+    color: var(--pro-text-muted) !important;
+    padding: 0.65em 1em !important;
+    border-bottom: 1px solid var(--pro-border) !important;
+  }
+
+  td {
+    padding: 0.6em 1em !important;
+    border-bottom: 1px solid var(--pro-border) !important;
+    vertical-align: top;
+  }
+
+  tr:last-child td { border-bottom: none !important; }
+  tr:hover td { background: var(--pro-bg-muted); }
+}
+
+
+/* --------------------------------------------------------------------------
+   11. ABOUT PAGE — hero-style contact row
+   -------------------------------------------------------------------------- */
+
+/* Contact links at bottom of about page */
+.page__content p a[href^="mailto"],
+.page__content p a[href*="linkedin"],
+.page__content p a[href*="github"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  padding: 0.35em 0.9em !important;
+  background: var(--pro-tag-bg) !important;
+  color: var(--pro-tag-text) !important;
+  border: 1px solid rgba(59,79,207,0.2) !important;
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+  font-size: 0.85rem !important;
+  text-decoration: none !important;
+  transition: var(--pro-transition);
+
+  &:hover {
+    background: var(--pro-accent) !important;
+    color: #fff !important;
+    border-color: var(--pro-accent) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,119,204,0.25);
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   12. SCROLL REVEAL & ENTRANCE ANIMATIONS
+   -------------------------------------------------------------------------- */
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.page__content,
+.archive {
+  animation: fadeSlideUp 0.45s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.list__item {
+  animation: fadeSlideUp 0.35s cubic-bezier(0.4, 0, 0.2, 1) both;
+
+  @for $i from 1 through 20 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{($i - 1) * 0.06}s;
+    }
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   13. RESPONSIVE POLISH
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  #main {
+    padding-left: 1em !important;
+    padding-right: 1em !important;
+    margin-top: 2em !important;
+  }
+
+  .page__title {
+    font-size: 1.55rem !important;
+  }
+
+  .list__item {
+    padding: 0.9em 1em !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   14. SELECTION & FOCUS STYLES
+   -------------------------------------------------------------------------- */
+
+::selection {
+  background: rgba(0, 119, 204, 0.18);
+  color: var(--pro-text);
+}
+
+:focus-visible {
+  outline: 2px solid var(--pro-accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}

@@ -1,9 +1,7 @@
 ---
-permalink: /about/
+permalink: /
 title: "About me"
 author_profile: false
-redirect_from:
-  - /about.html
 ---
 
 ## Senior AI Engineer & Machine Learning Specialist
