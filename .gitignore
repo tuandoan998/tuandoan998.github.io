@@ -24,3 +24,4 @@ package-lock.json
 
 # Artifacts
 artifacts/
+assets/portfolio/*/description.md

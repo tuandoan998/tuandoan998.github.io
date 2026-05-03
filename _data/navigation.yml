@@ -11,11 +11,11 @@ main:
   - title: "Home"
     url: /
 
+  - title: "Portfolio"
+    url: /portfolio/
+
   - title: "Blog"
     url: /blog/
-
-  # - title: "Portfolio"
-  #   url: /portfolio/
 
   # - title: "CV"
   #   url: /cv/

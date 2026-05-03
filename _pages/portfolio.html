@@ -7,8 +7,49 @@ author_profile: false
 
 {% include base_path %}
 
+<p class="portfolio-intro">A selection of machine learning and computer vision projects — from OCR pipelines and document intelligence to tracking systems and RAG architectures.</p>
 
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
-
+<div class="portfolio-grid">
+  {% assign sorted_portfolio = site.portfolio | sort: "order" %}
+  {% for post in sorted_portfolio %}
+    <div class="portfolio-card">
+      {% if post.header.teaser %}
+        <a href="{{ base_path }}{{ post.url }}" class="portfolio-card__thumb-link">
+          <img class="portfolio-card__image" src="{{ post.header.teaser }}" alt="{{ post.title }}">
+        </a>
+      {% else %}
+        <a href="{{ base_path }}{{ post.url }}" class="portfolio-card__thumb-link portfolio-card__image-placeholder">
+          <i class="fas fa-brain"></i>
+        </a>
+      {% endif %}
+      <div class="portfolio-card__body">
+        <h3 class="portfolio-card__title">
+          <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
+        </h3>
+        <p class="portfolio-card__excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+        {% if post.tech %}
+          <div class="portfolio-card__tags">
+            {% for tag in post.tech limit: 4 %}
+              <span class="portfolio-card__tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+        <div class="portfolio-card__links">
+          {% if post.blog_url %}
+            <a href="{{ post.blog_url }}" class="portfolio-card__link" target="_blank" rel="noopener">Blog</a>
+          {% endif %}
+          {% if post.github_url %}
+            <a href="{{ post.github_url }}" class="portfolio-card__link" target="_blank" rel="noopener">GitHub</a>
+          {% endif %}
+          {% if post.paper_url %}
+            <a href="{{ post.paper_url }}" class="portfolio-card__link" target="_blank" rel="noopener">Paper</a>
+          {% endif %}
+          {% if post.video_url %}
+            <a href="{{ post.video_url }}" class="portfolio-card__link" target="_blank" rel="noopener">Video</a>
+          {% endif %}
+          <a href="{{ base_path }}{{ post.url }}" class="portfolio-card__link portfolio-card__link--primary">Details →</a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
