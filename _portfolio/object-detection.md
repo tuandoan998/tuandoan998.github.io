@@ -2,7 +2,7 @@
 title: "Object Detection (YOLO)"
 excerpt: "Custom-trained YOLO detection models across multiple domains with TFLite conversion for mobile deployment."
 header:
-  teaser: /assets/portfolio/object_detection/car.png
+  teaser: /assets/portfolio/object_detection/vehicle_mobile.jpg
 collection: portfolio
 order: 4
 tech: ["YOLOv5", "YOLO11", "TFLite", "Python", "Android"]
@@ -12,11 +12,13 @@ A series of custom object detection models trained on domain-specific datasets u
 
 ## Gallery
 
-![Car detection](/assets/portfolio/object_detection/car.png)
+![Vehicle detection](/assets/portfolio/object_detection/vehicle.png)
 
 ![Cow detection](/assets/portfolio/object_detection/cow.png)
 
-![Dog TFLite inference](/assets/portfolio/object_detection/dog_tflite.png)
+![Vehicle TFLite inference](/assets/portfolio/object_detection/vehicle_mobile.jpg)
+
+![Vehicle TFLite inference with SAHI](/assets/portfolio/object_detection/vehicle_mobile_sahi.jpg)
 
 ## Key Features
 
