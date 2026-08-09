@@ -43,7 +43,7 @@ I transform messy, scanned, and rotated PDFs into clean, validated structured da
 
 ## Professional Experience
 
-**Machine Learning Engineer** | CyberLogitec (2021-Present)
+**Machine Learning Engineer** | CyberLogitec (2021 - Feb 2026)
 - Built LLM & RAG systems including HR-Chatbot, Codebase-Chatbot, and Document Q&A systems
 - Developed document ingestion pipelines supporting enterprise RAG systems
 - Achieved 98.1% accuracy in container number OCR through model optimization
